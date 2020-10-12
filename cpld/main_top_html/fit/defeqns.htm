@@ -1,0 +1,361 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$47 <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(3) AND A(2) AND NOT A(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(3) AND NOT A(2) AND A(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND NOT A(3) AND NOT A(2) AND NOT A(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$70 <= ((NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND NOT user_io/cmd(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND NOT user_io/cmd(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7)));
+</td></tr><tr><td>
+FDCPE_D24: FDCPE port map (D_I(24),D(24),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(24) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT mouse0dat(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND A(2) AND NOT A(1) AND joyb(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	joyb(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT joyb(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND A(2) AND NOT A(1) AND joyb(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	joyb(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT joyb(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(24) AND NOT $OpTx$FX_DC$47)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT mouse0dat(8)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(24) <= D_I(24) when D_OE(24) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(24) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_D25: FDCPE port map (D_I(25),D(25),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(25) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(25) AND NOT $OpTx$FX_DC$47)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(9)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(25) <= D_I(25) when D_OE(25) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(25) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_D26: FDCPE port map (D_I(26),D(26),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(26) <= ((D(26) AND NOT $OpTx$FX_DC$47)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(10)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(26) <= D_I(26) when D_OE(26) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(26) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_D27: FDCPE port map (D_I(27),D(27),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(27) <= ((D(27) AND NOT $OpTx$FX_DC$47)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(11)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(27) <= D_I(27) when D_OE(27) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(27) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_D28: FDCPE port map (D_I(28),D(28),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(28) <= ((D(28) AND NOT $OpTx$FX_DC$47)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(12)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(28) <= D_I(28) when D_OE(28) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(28) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_D29: FDCPE port map (D_I(29),D(29),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(29) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(29) AND NOT $OpTx$FX_DC$47));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(29) <= D_I(29) when D_OE(29) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(29) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_D30: FDCPE port map (D_I(30),D(30),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(30) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND NOT A(3) AND NOT A(2) AND NOT A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT mouse_buttons(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(30) AND NOT $OpTx$FX_DC$47)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(14)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(30) <= D_I(30) when D_OE(30) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(30) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_D31: FDCPE port map (D_I(31),D(31),NOT DS20,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(31) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND A(0) AND NOT A(3) AND NOT A(2) AND NOT A(1) AND joyb(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	mouse0dat(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(31) AND NOT $OpTx$FX_DC$47));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(31) <= D_I(31) when D_OE(31) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D_OE(31) <= NOT dsack_int;
+</td></tr><tr><td>
+FDCPE_DSACK0: FDCPE port map (DSACK_I(0),dsack_int,NOT CLKCPU_A,'0',AS20);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DSACK(0) <= DSACK_I(0) when DSACK_OE(0) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DSACK_OE(0) <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+DSACK_I(1) <= '1';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DSACK(1) <= DSACK_I(1) when DSACK_OE(1) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DSACK_OE(1) <= '0';
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+INTSIG2 <= (A(22) AND A(20) AND A(19) AND A(18) AND A(23) AND NOT A(21) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(17) AND NOT A(16));
+</td></tr><tr><td>
+</td></tr><tr><td>
+INTSIG3 <= A(3);
+</td></tr><tr><td>
+</td></tr><tr><td>
+INTSIG5 <= A(5);
+</td></tr><tr><td>
+</td></tr><tr><td>
+PUNT_OUT_I <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUNT_OUT <= PUNT_OUT_I when PUNT_OUT_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUNT_OUT_OE <= NOT PUNT_IN;
+</td></tr><tr><td>
+FDCPE_SPI_MISO: FDCPE port map (SPI_MISO,SPI_MISO_D,NOT SPI_CK,'0','0',SPI_MISO_CE);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SPI_MISO_D <= ((NOT user_io/cnt(0) AND NOT user_io/cnt(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SPI_MISO_CE <= (NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_dsack_int: FDCPE port map (dsack_int,'1',NOT CLKCPU_A,'0',AS20);
+</td></tr><tr><td>
+FDCPE_joyb0: FDCPE port map (joyb(0),SPI_MOSI,SPI_CK,'0','0',joyb_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;joyb_CE(0) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_joyb1: FDCPE port map (joyb(1),user_io/sbuf(0),SPI_CK,'0','0',joyb_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;joyb_CE(1) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_joyb2: FDCPE port map (joyb(2),user_io/sbuf(1),SPI_CK,'0','0',joyb_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;joyb_CE(2) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_joyb3: FDCPE port map (joyb(3),user_io/sbuf(2),SPI_CK,'0','0',joyb_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;joyb_CE(3) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_joyb4: FDCPE port map (joyb(4),user_io/sbuf(3),SPI_CK,'0','0',joyb_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;joyb_CE(4) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat0: FDCPE port map (mouse0dat(0),mouse0dat_D(0),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(0) <= ((SPI_MOSI AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(0) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat1: FDCPE port map (mouse0dat(1),mouse0dat_D(1),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(1) <= ((user_io/sbuf(0) AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(1) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat2: FDCPE port map (mouse0dat(2),mouse0dat_D(2),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(2) <= ((user_io/sbuf(1) AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(2) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat3: FDCPE port map (mouse0dat(3),mouse0dat_D(3),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(3) <= ((user_io/sbuf(2) AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(3) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat4: FDCPE port map (mouse0dat(4),mouse0dat_D(4),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(4) <= ((user_io/sbuf(3) AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(4) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat5: FDCPE port map (mouse0dat(5),mouse0dat_D(5),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(5) <= ((user_io/sbuf(4) AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(5) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat6: FDCPE port map (mouse0dat(6),mouse0dat_D(6),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(6) <= ((user_io/sbuf(5) AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(6) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat7: FDCPE port map (mouse0dat(7),mouse0dat_D(7),SPI_CK,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_D(7) <= ((user_io/sbuf(6) AND $OpTx$FX_DC$70)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (mouse0dat(7) AND NOT $OpTx$FX_DC$70));
+</td></tr><tr><td>
+FDCPE_mouse0dat8: FDCPE port map (mouse0dat(8),SPI_MOSI,SPI_CK,'0','0',mouse0dat_CE(8));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(8) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat9: FDCPE port map (mouse0dat(9),user_io/sbuf(0),SPI_CK,'0','0',mouse0dat_CE(9));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(9) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat10: FDCPE port map (mouse0dat(10),user_io/sbuf(1),SPI_CK,'0','0',mouse0dat_CE(10));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(10) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat11: FDCPE port map (mouse0dat(11),user_io/sbuf(2),SPI_CK,'0','0',mouse0dat_CE(11));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(11) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat12: FDCPE port map (mouse0dat(12),user_io/sbuf(3),SPI_CK,'0','0',mouse0dat_CE(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(12) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat13: FDCPE port map (mouse0dat(13),user_io/sbuf(4),SPI_CK,'0','0',mouse0dat_CE(13));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(13) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat14: FDCPE port map (mouse0dat(14),user_io/sbuf(5),SPI_CK,'0','0',mouse0dat_CE(14));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(14) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse0dat15: FDCPE port map (mouse0dat(15),user_io/sbuf(6),SPI_CK,'0','0',mouse0dat_CE(15));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse0dat_CE(15) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_mouse_buttons0: FDCPE port map (mouse_buttons(0),SPI_MOSI,SPI_CK,'0','0',mouse_buttons_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse_buttons_CE(0) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+</td></tr><tr><td>
+FDCPE_user_io/cmd0: FDCPE port map (user_io/cmd(0),SPI_MOSI,SPI_CK,'0','0',user_io/cmd_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(0) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_user_io/cmd1: FDCPE port map (user_io/cmd(1),user_io/sbuf(0),SPI_CK,'0','0',user_io/cmd_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(1) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_user_io/cmd2: FDCPE port map (user_io/cmd(2),user_io/sbuf(1),SPI_CK,'0','0',user_io/cmd_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(2) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_user_io/cmd3: FDCPE port map (user_io/cmd(3),user_io/sbuf(2),SPI_CK,'0','0',user_io/cmd_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(3) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_user_io/cmd4: FDCPE port map (user_io/cmd(4),user_io/sbuf(3),SPI_CK,'0','0',user_io/cmd_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(4) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_user_io/cmd5: FDCPE port map (user_io/cmd(5),user_io/sbuf(4),SPI_CK,'0','0',user_io/cmd_CE(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(5) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_user_io/cmd6: FDCPE port map (user_io/cmd(6),user_io/sbuf(5),SPI_CK,'0','0',user_io/cmd_CE(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(6) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FDCPE_user_io/cmd7: FDCPE port map (user_io/cmd(7),user_io/sbuf(6),SPI_CK,'0','0',user_io/cmd_CE(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cmd_CE(7) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+</td></tr><tr><td>
+FTCPE_user_io/cnt0: FTCPE port map (user_io/cnt(0),'1',SPI_CK,INTSIG8,'0');
+</td></tr><tr><td>
+FTCPE_user_io/cnt1: FTCPE port map (user_io/cnt(1),user_io/cnt(0),SPI_CK,INTSIG8,'0');
+</td></tr><tr><td>
+FTCPE_user_io/cnt2: FTCPE port map (user_io/cnt(2),user_io/cnt_T(2),SPI_CK,INTSIG8,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cnt_T(2) <= (user_io/cnt(0) AND user_io/cnt(1));
+</td></tr><tr><td>
+FTCPE_user_io/cnt3: FTCPE port map (user_io/cnt(3),user_io/cnt_T(3),SPI_CK,INTSIG8,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cnt_T(3) <= (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1));
+</td></tr><tr><td>
+FTCPE_user_io/cnt4: FTCPE port map (user_io/cnt(4),user_io/cnt_T(4),SPI_CK,INTSIG8,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cnt_T(4) <= (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(3));
+</td></tr><tr><td>
+FTCPE_user_io/cnt5: FTCPE port map (user_io/cnt(5),user_io/cnt_T(5),SPI_CK,INTSIG8,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_io/cnt_T(5) <= (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	user_io/cnt(3) AND user_io/cnt(4));
+</td></tr><tr><td>
+FDCPE_user_io/sbuf0: FDCPE port map (user_io/sbuf(0),SPI_MOSI,SPI_CK,'0','0',NOT INTSIG8);
+</td></tr><tr><td>
+FDCPE_user_io/sbuf1: FDCPE port map (user_io/sbuf(1),user_io/sbuf(0),SPI_CK,'0','0',NOT INTSIG8);
+</td></tr><tr><td>
+FDCPE_user_io/sbuf2: FDCPE port map (user_io/sbuf(2),user_io/sbuf(1),SPI_CK,'0','0',NOT INTSIG8);
+</td></tr><tr><td>
+FDCPE_user_io/sbuf3: FDCPE port map (user_io/sbuf(3),user_io/sbuf(2),SPI_CK,'0','0',NOT INTSIG8);
+</td></tr><tr><td>
+FDCPE_user_io/sbuf4: FDCPE port map (user_io/sbuf(4),user_io/sbuf(3),SPI_CK,'0','0',NOT INTSIG8);
+</td></tr><tr><td>
+FDCPE_user_io/sbuf5: FDCPE port map (user_io/sbuf(5),user_io/sbuf(4),SPI_CK,'0','0',NOT INTSIG8);
+</td></tr><tr><td>
+FDCPE_user_io/sbuf6: FDCPE port map (user_io/sbuf(6),user_io/sbuf(5),SPI_CK,'0','0',NOT INTSIG8);
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

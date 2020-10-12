@@ -1,0 +1,5 @@
+# begin LFP file C:\Repo\cd32_riser\firmware\cpld\TFRiserRev1\main_top.lfp
+designfile main_top.v
+parttype xc9572xl-vq64-5
+bus_delimiter 0;
+set_busdelim_onsave 1;

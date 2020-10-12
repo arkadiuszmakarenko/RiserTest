@@ -1,0 +1,330 @@
+Release 13.1 - xst O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: main_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main_top"
+Output Format                      : NGC
+Target Device                      : XC9500XL CPLDs
+
+---- Source Options
+Top Module Name                    : main_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : Yes
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "user_io.v" in library work
+Compiling verilog file "main_top.v" in library work
+Module <user_io> compiled
+Module <main_top> compiled
+No errors in compilation
+Analysis of file <"main_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main_top> in library <work> with parameters.
+	CIA_PRA = "000000000001"
+	JOY0DAT_H = "000000001010"
+	JOY0DAT_L = "00000000000000000000000000001011"
+	JOY1DAT_H = "000000001100"
+	JOY1DAT_L = "00000000000000000000000000001101"
+
+Analyzing hierarchy for module <user_io> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main_top>.
+	CIA_PRA = 12'b000000000001
+	JOY0DAT_H = 12'b000000001010
+	JOY0DAT_L = 32'b00000000000000000000000000001011
+	JOY1DAT_H = 12'b000000001100
+	JOY1DAT_L = 32'b00000000000000000000000000001101
+Module <main_top> is correct for synthesis.
+ 
+Analyzing module <user_io> in library <work>.
+WARNING:Xst:863 - "user_io.v" line 34: Name conflict (<kbd_mouse_data> and <KBD_MOUSE_DATA>, renaming kbd_mouse_data as kbd_mouse_data_rnm0).
+WARNING:Xst:863 - "user_io.v" line 32: Name conflict (<kbd_mouse_strobe> and <KBD_MOUSE_STROBE>, renaming kbd_mouse_strobe as kbd_mouse_strobe_rnm0).
+WARNING:Xst:863 - "user_io.v" line 33: Name conflict (<kbd_mouse_type> and <KBD_MOUSE_TYPE>, renaming kbd_mouse_type as kbd_mouse_type_rnm0).
+WARNING:Xst:863 - "user_io.v" line 31: Name conflict (<mouse_buttons> and <MOUSE_BUTTONS>, renaming mouse_buttons as mouse_buttons_rnm0).
+Module <user_io> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <joy1enable> in unit <main_top> has a constant value of 0 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <kbd_mouse_strobe_rnm0> in unit <user_io> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <user_io>.
+    Related source file is "user_io.v".
+WARNING:Xst:653 - Signal <kbd_mouse_data_rnm0> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+    Found 8x1-bit ROM for signal <$COND_9>.
+    Found 1-bit register for signal <SPI_MISO>.
+    Found 4-bit register for signal <but_sw>.
+    Found 8-bit register for signal <cmd>.
+    Found 6-bit up counter for signal <cnt>.
+    Found 6-bit register for signal <joystick0>.
+    Found 6-bit register for signal <joystick1>.
+    Found 2-bit register for signal <kbd_mouse_type_rnm0>.
+    Found 3-bit register for signal <mouse_buttons_rnm0>.
+    Found 8-bit register for signal <mousex>.
+    Found 8-bit register for signal <mousey>.
+    Found 7-bit register for signal <sbuf>.
+    Found 6-bit comparator less for signal <SPI_MISO$cmp_lt0000> created at line 68.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <user_io> synthesized.
+
+
+Synthesizing Unit <main_top>.
+    Related source file is "main_top.v".
+WARNING:Xst:1306 - Output <INTSIG1> is never assigned.
+WARNING:Xst:1306 - Output <INTSIG4> is never assigned.
+WARNING:Xst:1306 - Output <INTSIG6> is never assigned.
+WARNING:Xst:1306 - Output <INTSIG7> is never assigned.
+WARNING:Xst:646 - Signal <joyb<5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <joya<5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <joya<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <joy1enable> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ciab_decode> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ciaa_decode> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <board_switches> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <board_buttons> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <_mthird> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <_mright> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit tristate buffer for signal <D>.
+    Found 2-bit tristate buffer for signal <DSACK>.
+    Found 1-bit tristate buffer for signal <PUNT_OUT>.
+    Found 8-bit register for signal <data_out>.
+    Found 1-bit xor2 for signal <data_out$xor0000> created at line 147.
+    Found 1-bit xor2 for signal <data_out$xor0001> created at line 148.
+    Found 1-bit register for signal <dsack_int>.
+    Found 1-bit register for signal <dsack_int_d>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Xor(s).
+	inferred  11 Tristate(s).
+Unit <main_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 8x1-bit ROM                                           : 1
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 41
+ 1-bit register                                        : 37
+ 2-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 1
+ 6-bit comparator less                                 : 1
+# Tristates                                            : 3
+ 1-bit tristate buffer                                 : 1
+ 2-bit tristate buffer                                 : 1
+ 8-bit tristate buffer                                 : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 8x1-bit ROM                                           : 1
+# Counters                                             : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main_top> ...
+WARNING:Xst:1426 - The value init of the FF/Latch dsack_int hinder the constant cleaning in the block main_top.
+   You should achieve better results by setting this init to 1.
+
+Optimizing unit <user_io> ...
+  implementation constraint: INIT=r	 : mousex_7
+  implementation constraint: INIT=r	 : mousey_7
+  implementation constraint: INIT=r	 : mouse_buttons_rnm0_2
+  implementation constraint: INIT=r	 : mouse_buttons_rnm0_1
+  implementation constraint: INIT=r	 : mouse_buttons_rnm0_0
+  implementation constraint: INIT=r	 : mousey_0
+  implementation constraint: INIT=r	 : mousey_1
+  implementation constraint: INIT=r	 : mousey_2
+  implementation constraint: INIT=r	 : mousey_3
+  implementation constraint: INIT=r	 : mousey_4
+  implementation constraint: INIT=r	 : mousey_5
+  implementation constraint: INIT=r	 : mousey_6
+  implementation constraint: INIT=r	 : mousex_0
+  implementation constraint: INIT=r	 : mousex_1
+  implementation constraint: INIT=r	 : mousex_2
+  implementation constraint: INIT=r	 : mousex_3
+  implementation constraint: INIT=r	 : mousex_4
+  implementation constraint: INIT=r	 : mousex_5
+  implementation constraint: INIT=r	 : mousex_6
+WARNING:Xst:2677 - Node <kbd_mouse_type_rnm0_1> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <kbd_mouse_type_rnm0_0> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <joystick1_5> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <joystick0_0> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <joystick0_1> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <joystick0_2> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <joystick0_3> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <joystick0_4> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <joystick0_5> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <but_sw_0> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <but_sw_1> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <but_sw_2> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <but_sw_3> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <mouse_buttons_rnm0_2> of sequential type is unconnected in block <user_io>.
+WARNING:Xst:2677 - Node <mouse_buttons_rnm0_1> of sequential type is unconnected in block <user_io>.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main_top.ngr
+Top Level Output File Name         : main_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : Yes
+Target Technology                  : XC9500XL CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 51
+
+Cell Usage :
+# BELS                             : 260
+#      AND2                        : 66
+#      AND3                        : 20
+#      AND4                        : 9
+#      AND6                        : 1
+#      AND7                        : 3
+#      AND8                        : 1
+#      GND                         : 2
+#      INV                         : 115
+#      OR2                         : 35
+#      VCC                         : 1
+#      XOR2                        : 7
+# FlipFlops/Latches                : 54
+#      FD                          : 8
+#      FDC                         : 6
+#      FDCE                        : 38
+#      FDP                         : 2
+# IO Buffers                       : 42
+#      IBUF                        : 27
+#      OBUF                        : 4
+#      OBUFE                       : 11
+=========================================================================
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 2.27 secs
+ 
+--> 
+
+Total memory usage is 4477316 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

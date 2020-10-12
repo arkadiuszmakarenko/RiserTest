@@ -1,0 +1,890 @@
+ 
+cpldfit:  version O.40d                             Xilinx Inc.
+                                  Fitter Report
+Design Name: main_top                            Date: 10-12-2020,  7:51PM
+Device Used: XC9572XL-5-VQ64
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+61 /72  ( 85%) 148 /360  ( 41%) 138/216 ( 64%)   54 /72  ( 75%) 42 /52  ( 81%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          18/18*      33/54       34/90       9/13
+FB2          10/18       46/54       50/90      12/13
+FB3          18/18*      34/54       36/90      13/14
+FB4          15/18       25/54       28/90       8/12
+             -----       -----       -----      -----    
+             61/72      138/216     148/360     42/52 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'CLKCPU_A' mapped onto global clock net GCK1.
+Signal 'SPI_CK' mapped onto global clock net GCK2.
+Global output enable net(s) unused.
+Global set/reset net(s) unused.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   25          25    |  I/O              :    37      46
+Output        :   15          15    |  GCK/IO           :     3       3
+Bidirectional :    0           0    |  GTS/IO           :     1       2
+GCK           :    2           2    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    0           0    |
+                 ----        ----
+        Total     42          42
+
+** Power Data **
+
+There are 61 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'main_top.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'CLKCPU_A' based upon the LOC
+   constraint 'P15'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'SPI_CK' based upon the LOC
+   constraint 'P16'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'SPI_MOSI' based upon the LOC
+   constraint 'P17'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:936 - The output buffer 'INTSIG7_OBUF' is missing an input and will
+   be deleted.
+WARNING:Cpld:936 - The output buffer 'INTSIG6_OBUF' is missing an input and will
+   be deleted.
+WARNING:Cpld:936 - The output buffer 'INTSIG4_OBUF' is missing an input and will
+   be deleted.
+WARNING:Cpld:936 - The output buffer 'INTSIG1_OBUF' is missing an input and will
+   be deleted.
+WARNING:Cpld:1007 - Removing unused input(s) 'A<12>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'A<13>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'A<14>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'A<15>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'RW'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal
+   'SPI_MOSI_IBUF' is ignored. Most likely the signal is gated and therefore
+   cannot be used as a global control signal.
+*************************  Summary of Mapped Logic  ************************
+
+** 15 Outputs **
+
+Signal              Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                Pts   Inps          No.  Type    Use     Mode Rate State
+PUNT_OUT            1     1     FB1_2   8    I/O     O       STD  FAST 
+INTSIG5             1     1     FB1_3   12   I/O     O       STD  FAST 
+INTSIG2             1     8     FB1_12  23   I/O     O       STD  FAST 
+SPI_MISO            3     6     FB1_15  19   I/O     O       STD  FAST RESET
+D<27>               5     18    FB2_2   60   I/O     O       STD  FAST RESET
+D<31>               6     19    FB2_3   58   I/O     O       STD  FAST RESET
+D<29>               5     18    FB2_4   59   I/O     O       STD  FAST RESET
+D<25>               7     20    FB2_5   61   I/O     O       STD  FAST RESET
+D<28>               5     18    FB2_6   62   I/O     O       STD  FAST RESET
+D<24>               9     22    FB2_8   63   I/O     O       STD  FAST RESET
+D<30>               6     19    FB2_9   64   GSR/I/O O       STD  FAST RESET
+D<26>               5     18    FB2_10  1    I/O     O       STD  FAST RESET
+DSACK<1>            0     0     FB2_15  6    I/O     O       STD  FAST 
+DSACK<0>            2     2     FB2_17  7    I/O     O       STD  FAST RESET
+INTSIG3             1     1     FB3_5   24   I/O     O       STD  FAST 
+
+** 46 Buried Nodes **
+
+Signal              Total Total Loc     Pwr  Reg Init
+Name                Pts   Inps          Mode State
+mouse_buttons<0>    2     16    FB1_1   STD  RESET
+mouse0dat<9>        2     16    FB1_4   STD  RESET
+mouse0dat<8>        2     16    FB1_5   STD  RESET
+mouse0dat<15>       2     16    FB1_6   STD  RESET
+mouse0dat<14>       2     16    FB1_7   STD  RESET
+mouse0dat<13>       2     16    FB1_8   STD  RESET
+mouse0dat<12>       2     16    FB1_9   STD  RESET
+mouse0dat<11>       2     16    FB1_10  STD  RESET
+mouse0dat<10>       2     16    FB1_11  STD  RESET
+joyb<4>             2     16    FB1_13  STD  RESET
+joyb<3>             2     16    FB1_14  STD  RESET
+joyb<2>             2     16    FB1_16  STD  RESET
+joyb<1>             2     16    FB1_17  STD  RESET
+joyb<0>             2     16    FB1_18  STD  RESET
+user_io/sbuf<2>     2     2     FB3_1   STD  RESET
+user_io/sbuf<1>     2     2     FB3_2   STD  RESET
+user_io/sbuf<0>     2     2     FB3_3   STD  RESET
+user_io/cnt<5>      2     6     FB3_4   STD  RESET
+user_io/cnt<4>      2     5     FB3_6   STD  RESET
+user_io/cnt<3>      2     4     FB3_7   STD  RESET
+user_io/cnt<2>      2     3     FB3_8   STD  RESET
+user_io/cnt<1>      2     2     FB3_9   STD  RESET
+user_io/cmd<6>      2     8     FB3_10  STD  RESET
+user_io/cmd<5>      2     8     FB3_11  STD  RESET
+user_io/cmd<4>      2     8     FB3_12  STD  RESET
+user_io/cmd<3>      2     8     FB3_13  STD  RESET
+user_io/cmd<2>      2     8     FB3_14  STD  RESET
+user_io/cmd<1>      2     8     FB3_15  STD  RESET
+user_io/cmd<0>      2     8     FB3_16  STD  RESET
+$OpTx$FX_DC$70      2     15    FB3_17  STD  
+$OpTx$FX_DC$47      3     12    FB3_18  STD  
+user_io/cnt<0>      1     1     FB4_4   STD  RESET
+dsack_int           1     1     FB4_5   STD  RESET
+user_io/sbuf<6>     2     2     FB4_6   STD  RESET
+user_io/sbuf<5>     2     2     FB4_7   STD  RESET
+user_io/sbuf<4>     2     2     FB4_8   STD  RESET
+user_io/sbuf<3>     2     2     FB4_9   STD  RESET
+user_io/cmd<7>      2     8     FB4_10  STD  RESET
+mouse0dat<7>        2     3     FB4_11  STD  RESET
+mouse0dat<6>        2     3     FB4_12  STD  RESET
+
+Signal              Total Total Loc     Pwr  Reg Init
+Name                Pts   Inps          Mode State
+mouse0dat<5>        2     3     FB4_13  STD  RESET
+mouse0dat<4>        2     3     FB4_14  STD  RESET
+mouse0dat<3>        2     3     FB4_15  STD  RESET
+mouse0dat<2>        2     3     FB4_16  STD  RESET
+mouse0dat<1>        2     3     FB4_17  STD  RESET
+mouse0dat<0>        2     3     FB4_18  STD  RESET
+
+** 27 Inputs **
+
+Signal              Loc     Pin  Pin     Pin     
+Name                        No.  Type    Use     
+PUNT_IN             FB1_5   9    I/O     I
+CLKCPU_A            FB1_9   15   GCK/I/O GCK
+INTSIG8             FB1_10  18   I/O     I
+SPI_CK              FB1_11  16   GCK/I/O GCK
+SPI_MOSI            FB1_14  17   GCK/I/O I
+AS20                FB2_11  2    GTS/I/O I
+DS20                FB2_12  4    I/O     I
+A<2>                FB3_3   31   I/O     I
+A<3>                FB3_4   32   I/O     I
+A<5>                FB3_6   34   I/O     I
+A<1>                FB3_8   25   I/O     I
+A<0>                FB3_9   27   I/O     I
+A<9>                FB3_10  39   I/O     I
+A<4>                FB3_11  33   I/O     I
+A<10>               FB3_12  40   I/O     I
+A<6>                FB3_14  35   I/O     I
+A<7>                FB3_15  36   I/O     I
+A<11>               FB3_16  42   I/O     I
+A<8>                FB3_17  38   I/O     I
+A<16>               FB4_4   47   I/O     I
+A<23>               FB4_6   49   I/O     I
+A<20>               FB4_10  51   I/O     I
+A<17>               FB4_11  48   I/O     I
+A<21>               FB4_12  52   I/O     I
+A<22>               FB4_14  50   I/O     I
+A<19>               FB4_15  56   I/O     I
+A<18>               FB4_17  57   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               33/21
+Number of signals used by logic mapping into function block:  33
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+mouse_buttons<0>      2       0     0   3     FB1_1         (b)     (b)
+PUNT_OUT              1       0     0   4     FB1_2   8     I/O     O
+INTSIG5               1       0     0   4     FB1_3   12    I/O     O
+mouse0dat<9>          2       0     0   3     FB1_4   13    I/O     (b)
+mouse0dat<8>          2       0     0   3     FB1_5   9     I/O     I
+mouse0dat<15>         2       0     0   3     FB1_6   10    I/O     (b)
+mouse0dat<14>         2       0     0   3     FB1_7         (b)     (b)
+mouse0dat<13>         2       0     0   3     FB1_8   11    I/O     (b)
+mouse0dat<12>         2       0     0   3     FB1_9   15    GCK/I/O GCK
+mouse0dat<11>         2       0     0   3     FB1_10  18    I/O     I
+mouse0dat<10>         2       0     0   3     FB1_11  16    GCK/I/O GCK
+INTSIG2               1       0     0   4     FB1_12  23    I/O     O
+joyb<4>               2       0     0   3     FB1_13        (b)     (b)
+joyb<3>               2       0     0   3     FB1_14  17    GCK/I/O I
+SPI_MISO              3       0     0   2     FB1_15  19    I/O     O
+joyb<2>               2       0     0   3     FB1_16        (b)     (b)
+joyb<1>               2       0     0   3     FB1_17  20    I/O     (b)
+joyb<0>               2       0     0   3     FB1_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A<16>             12: SPI_MOSI          23: user_io/cnt<2> 
+  2: A<17>             13: user_io/cmd<0>    24: user_io/cnt<3> 
+  3: A<18>             14: user_io/cmd<1>    25: user_io/cnt<4> 
+  4: A<19>             15: user_io/cmd<2>    26: user_io/cnt<5> 
+  5: A<20>             16: user_io/cmd<3>    27: user_io/sbuf<0> 
+  6: A<21>             17: user_io/cmd<4>    28: user_io/sbuf<1> 
+  7: A<22>             18: user_io/cmd<5>    29: user_io/sbuf<2> 
+  8: A<23>             19: user_io/cmd<6>    30: user_io/sbuf<3> 
+  9: A<5>              20: user_io/cmd<7>    31: user_io/sbuf<4> 
+ 10: INTSIG8           21: user_io/cnt<0>    32: user_io/sbuf<5> 
+ 11: PUNT_IN           22: user_io/cnt<1>    33: user_io/sbuf<6> 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+mouse_buttons<0>     .........X.XXXXXXXXXXXXXXX.............. 16
+PUNT_OUT             ..........X............................. 1
+INTSIG5              ........X............................... 1
+mouse0dat<9>         .........X..XXXXXXXXXXXXXXX............. 16
+mouse0dat<8>         .........X.XXXXXXXXXXXXXXX.............. 16
+mouse0dat<15>        .........X..XXXXXXXXXXXXXX......X....... 16
+mouse0dat<14>        .........X..XXXXXXXXXXXXXX.....X........ 16
+mouse0dat<13>        .........X..XXXXXXXXXXXXXX....X......... 16
+mouse0dat<12>        .........X..XXXXXXXXXXXXXX...X.......... 16
+mouse0dat<11>        .........X..XXXXXXXXXXXXXX..X........... 16
+mouse0dat<10>        .........X..XXXXXXXXXXXXXX.X............ 16
+INTSIG2              XXXXXXXX................................ 8
+joyb<4>              .........X..XXXXXXXXXXXXXX...X.......... 16
+joyb<3>              .........X..XXXXXXXXXXXXXX..X........... 16
+SPI_MISO             ....................XXXXXX.............. 6
+joyb<2>              .........X..XXXXXXXXXXXXXX.X............ 16
+joyb<1>              .........X..XXXXXXXXXXXXXXX............. 16
+joyb<0>              .........X.XXXXXXXXXXXXXXX.............. 16
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               46/8
+Number of signals used by logic mapping into function block:  46
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0   \/3   2     FB2_1         (b)     (b)
+D<27>                 5       3<- \/3   0     FB2_2   60    I/O     O
+D<31>                 6       3<- \/2   0     FB2_3   58    I/O     O
+D<29>                 5       2<- \/2   0     FB2_4   59    I/O     O
+D<25>                 7       2<-   0   0     FB2_5   61    I/O     O
+D<28>                 5       0     0   0     FB2_6   62    I/O     O
+(unused)              0       0   \/5   0     FB2_7         (b)     (b)
+D<24>                 9       5<- \/1   0     FB2_8   63    I/O     O
+D<30>                 6       1<-   0   0     FB2_9   64    GSR/I/O O
+D<26>                 5       0     0   0     FB2_10  1     I/O     O
+(unused)              0       0     0   5     FB2_11  2     GTS/I/O I
+(unused)              0       0     0   5     FB2_12  4     I/O     I
+(unused)              0       0     0   5     FB2_13        (b)     
+(unused)              0       0     0   5     FB2_14  5     GTS/I/O 
+DSACK<1>              0       0     0   5     FB2_15  6     I/O     O
+(unused)              0       0     0   5     FB2_16        (b)     
+DSACK<0>              2       0     0   3     FB2_17  7     I/O     O
+(unused)              0       0     0   5     FB2_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$47    17: D<28>             32: mouse0dat<11> 
+  2: AS20              18: D<29>             33: mouse0dat<12> 
+  3: A<0>              19: D<30>             34: mouse0dat<13> 
+  4: A<10>             20: D<31>             35: mouse0dat<14> 
+  5: A<11>             21: DS20              36: mouse0dat<15> 
+  6: A<1>              22: A<3>              37: mouse0dat<1> 
+  7: A<2>              23: A<5>              38: mouse0dat<2> 
+  8: A<4>              24: dsack_int         39: mouse0dat<3> 
+  9: A<6>              25: joyb<0>           40: mouse0dat<4> 
+ 10: A<7>              26: joyb<1>           41: mouse0dat<5> 
+ 11: A<8>              27: joyb<2>           42: mouse0dat<6> 
+ 12: A<9>              28: joyb<3>           43: mouse0dat<7> 
+ 13: D<24>             29: joyb<4>           44: mouse0dat<8> 
+ 14: D<25>             30: mouse0dat<0>      45: mouse0dat<9> 
+ 15: D<26>             31: mouse0dat<10>     46: mouse_buttons<0> 
+ 16: D<27>            
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+D<27>                X.XXXXXXXXXX...X....XXXX.......X......X........... 18
+D<31>                X.XXXXXXXXXX.......XXXXX....X......X......X....... 19
+D<29>                X.XXXXXXXXXX.....X..XXXX.........X......X......... 18
+D<25>                X.XXXXXXXXXX.X......XXXXXX..........X.......X..... 20
+D<28>                X.XXXXXXXXXX....X...XXXX........X......X.......... 18
+D<24>                X.XXXXXXXXXXX.......XXXXXXXX.X.............X...... 22
+D<30>                X.XXXXXXXXXX......X.XXXX..........X......X...X.... 19
+D<26>                X.XXXXXXXXXX..X.....XXXX......X......X............ 18
+DSACK<1>             .................................................. 0
+DSACK<0>             .X.....................X.......................... 2
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               34/20
+Number of signals used by logic mapping into function block:  34
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+user_io/sbuf<2>       2       0     0   3     FB3_1         (b)     (b)
+user_io/sbuf<1>       2       0     0   3     FB3_2   22    I/O     (b)
+user_io/sbuf<0>       2       0     0   3     FB3_3   31    I/O     I
+user_io/cnt<5>        2       0     0   3     FB3_4   32    I/O     I
+INTSIG3               1       0     0   4     FB3_5   24    I/O     O
+user_io/cnt<4>        2       0     0   3     FB3_6   34    I/O     I
+user_io/cnt<3>        2       0     0   3     FB3_7         (b)     (b)
+user_io/cnt<2>        2       0     0   3     FB3_8   25    I/O     I
+user_io/cnt<1>        2       0     0   3     FB3_9   27    I/O     I
+user_io/cmd<6>        2       0     0   3     FB3_10  39    I/O     I
+user_io/cmd<5>        2       0     0   3     FB3_11  33    I/O     I
+user_io/cmd<4>        2       0     0   3     FB3_12  40    I/O     I
+user_io/cmd<3>        2       0     0   3     FB3_13        (b)     (b)
+user_io/cmd<2>        2       0     0   3     FB3_14  35    I/O     I
+user_io/cmd<1>        2       0     0   3     FB3_15  36    I/O     I
+user_io/cmd<0>        2       0     0   3     FB3_16  42    I/O     I
+$OpTx$FX_DC$70        2       0     0   3     FB3_17  38    I/O     I
+$OpTx$FX_DC$47        3       0     0   2     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A<0>              13: INTSIG8           24: user_io/cnt<1> 
+  2: A<10>             14: SPI_MOSI          25: user_io/cnt<2> 
+  3: A<11>             15: user_io/cmd<0>    26: user_io/cnt<3> 
+  4: A<1>              16: user_io/cmd<1>    27: user_io/cnt<4> 
+  5: A<2>              17: user_io/cmd<2>    28: user_io/cnt<5> 
+  6: A<4>              18: user_io/cmd<3>    29: user_io/sbuf<0> 
+  7: A<6>              19: user_io/cmd<4>    30: user_io/sbuf<1> 
+  8: A<7>              20: user_io/cmd<5>    31: user_io/sbuf<2> 
+  9: A<8>              21: user_io/cmd<6>    32: user_io/sbuf<3> 
+ 10: A<9>              22: user_io/cmd<7>    33: user_io/sbuf<4> 
+ 11: A<3>              23: user_io/cnt<0>    34: user_io/sbuf<5> 
+ 12: A<5>             
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+user_io/sbuf<2>      ............X................X.......... 2
+user_io/sbuf<1>      ............X...............X........... 2
+user_io/sbuf<0>      ............XX.......................... 2
+user_io/cnt<5>       ............X.........XXXXX............. 6
+INTSIG3              ..........X............................. 1
+user_io/cnt<4>       ............X.........XXXX.............. 5
+user_io/cnt<3>       ............X.........XXX............... 4
+user_io/cnt<2>       ............X.........XX................ 3
+user_io/cnt<1>       ............X.........X................. 2
+user_io/cmd<6>       ............X.........XXXXXX.....X...... 8
+user_io/cmd<5>       ............X.........XXXXXX....X....... 8
+user_io/cmd<4>       ............X.........XXXXXX...X........ 8
+user_io/cmd<3>       ............X.........XXXXXX..X......... 8
+user_io/cmd<2>       ............X.........XXXXXX.X.......... 8
+user_io/cmd<1>       ............X.........XXXXXXX........... 8
+user_io/cmd<0>       ............XX........XXXXXX............ 8
+$OpTx$FX_DC$70       ............X.XXXXXXXXXXXXXX............ 15
+$OpTx$FX_DC$47       XXXXXXXXXXXX............................ 12
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               25/29
+Number of signals used by logic mapping into function block:  25
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB4_1         (b)     
+(unused)              0       0     0   5     FB4_2   43    I/O     
+(unused)              0       0     0   5     FB4_3   46    I/O     
+user_io/cnt<0>        1       0     0   4     FB4_4   47    I/O     I
+dsack_int             1       0     0   4     FB4_5   44    I/O     (b)
+user_io/sbuf<6>       2       0     0   3     FB4_6   49    I/O     I
+user_io/sbuf<5>       2       0     0   3     FB4_7         (b)     (b)
+user_io/sbuf<4>       2       0     0   3     FB4_8   45    I/O     (b)
+user_io/sbuf<3>       2       0     0   3     FB4_9         (b)     (b)
+user_io/cmd<7>        2       0     0   3     FB4_10  51    I/O     I
+mouse0dat<7>          2       0     0   3     FB4_11  48    I/O     I
+mouse0dat<6>          2       0     0   3     FB4_12  52    I/O     I
+mouse0dat<5>          2       0     0   3     FB4_13        (b)     (b)
+mouse0dat<4>          2       0     0   3     FB4_14  50    I/O     I
+mouse0dat<3>          2       0     0   3     FB4_15  56    I/O     I
+mouse0dat<2>          2       0     0   3     FB4_16        (b)     (b)
+mouse0dat<1>          2       0     0   3     FB4_17  57    I/O     I
+mouse0dat<0>          2       0     0   3     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$70    10: mouse0dat<5>      18: user_io/cnt<5> 
+  2: AS20              11: mouse0dat<6>      19: user_io/sbuf<0> 
+  3: INTSIG8           12: mouse0dat<7>      20: user_io/sbuf<1> 
+  4: SPI_MOSI          13: user_io/cnt<0>    21: user_io/sbuf<2> 
+  5: mouse0dat<0>      14: user_io/cnt<1>    22: user_io/sbuf<3> 
+  6: mouse0dat<1>      15: user_io/cnt<2>    23: user_io/sbuf<4> 
+  7: mouse0dat<2>      16: user_io/cnt<3>    24: user_io/sbuf<5> 
+  8: mouse0dat<3>      17: user_io/cnt<4>    25: user_io/sbuf<6> 
+  9: mouse0dat<4>     
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+user_io/cnt<0>       ..X..................................... 1
+dsack_int            .X...................................... 1
+user_io/sbuf<6>      ..X....................X................ 2
+user_io/sbuf<5>      ..X...................X................. 2
+user_io/sbuf<4>      ..X..................X.................. 2
+user_io/sbuf<3>      ..X.................X................... 2
+user_io/cmd<7>       ..X.........XXXXXX......X............... 8
+mouse0dat<7>         X..........X............X............... 3
+mouse0dat<6>         X.........X............X................ 3
+mouse0dat<5>         X........X............X................. 3
+mouse0dat<4>         X.......X............X.................. 3
+mouse0dat<3>         X......X............X................... 3
+mouse0dat<2>         X.....X............X.................... 3
+mouse0dat<1>         X....X............X..................... 3
+mouse0dat<0>         X..XX................................... 3
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+$OpTx$FX_DC$47 <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(3) AND A(2) AND NOT A(1))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(3) AND NOT A(2) AND A(1))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND NOT A(3) AND NOT A(2) AND NOT A(1)));
+
+
+$OpTx$FX_DC$70 <= ((NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND NOT user_io/cmd(4) AND 
+	NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7))
+	OR (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND NOT user_io/cmd(4) AND 
+	NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7)));
+
+FDCPE_D24: FDCPE port map (D_I(24),D(24),NOT DS20,'0','0');
+D(24) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	NOT mouse0dat(0))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND A(2) AND NOT A(1) AND joyb(1) AND 
+	joyb(3))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(1) AND 
+	NOT joyb(3))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND A(2) AND NOT A(1) AND joyb(0) AND 
+	joyb(2))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(0) AND 
+	NOT joyb(2))
+	OR (NOT D(24) AND NOT $OpTx$FX_DC$47)
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	NOT mouse0dat(8)));
+D(24) <= D_I(24) when D_OE(24) = '1' else 'Z';
+D_OE(24) <= NOT dsack_int;
+
+FDCPE_D25: FDCPE port map (D_I(25),D(25),NOT DS20,'0','0');
+D(25) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(1))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND A(2) AND NOT A(1) AND NOT joyb(0))
+	OR (D(25) AND NOT $OpTx$FX_DC$47)
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(1))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(9)));
+D(25) <= D_I(25) when D_OE(25) = '1' else 'Z';
+D_OE(25) <= NOT dsack_int;
+
+FDCPE_D26: FDCPE port map (D_I(26),D(26),NOT DS20,'0','0');
+D(26) <= ((D(26) AND NOT $OpTx$FX_DC$47)
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(2))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(10)));
+D(26) <= D_I(26) when D_OE(26) = '1' else 'Z';
+D_OE(26) <= NOT dsack_int;
+
+FDCPE_D27: FDCPE port map (D_I(27),D(27),NOT DS20,'0','0');
+D(27) <= ((D(27) AND NOT $OpTx$FX_DC$47)
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(3))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(11)));
+D(27) <= D_I(27) when D_OE(27) = '1' else 'Z';
+D_OE(27) <= NOT dsack_int;
+
+FDCPE_D28: FDCPE port map (D_I(28),D(28),NOT DS20,'0','0');
+D(28) <= ((D(28) AND NOT $OpTx$FX_DC$47)
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(4))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(12)));
+D(28) <= D_I(28) when D_OE(28) = '1' else 'Z';
+D_OE(28) <= NOT dsack_int;
+
+FDCPE_D29: FDCPE port map (D_I(29),D(29),NOT DS20,'0','0');
+D(29) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(5))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(13))
+	OR (D(29) AND NOT $OpTx$FX_DC$47));
+D(29) <= D_I(29) when D_OE(29) = '1' else 'Z';
+D_OE(29) <= NOT dsack_int;
+
+FDCPE_D30: FDCPE port map (D_I(30),D(30),NOT DS20,'0','0');
+D(30) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND NOT A(3) AND NOT A(2) AND NOT A(1) AND 
+	NOT mouse_buttons(0))
+	OR (D(30) AND NOT $OpTx$FX_DC$47)
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(6))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(14)));
+D(30) <= D_I(30) when D_OE(30) = '1' else 'Z';
+D_OE(30) <= NOT dsack_int;
+
+FDCPE_D31: FDCPE port map (D_I(31),D(31),NOT DS20,'0','0');
+D(31) <= ((NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(7))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND A(0) AND NOT A(3) AND NOT A(2) AND NOT A(1) AND joyb(4))
+	OR (NOT A(9) AND NOT A(8) AND NOT A(7) AND NOT A(6) AND NOT A(5) AND NOT A(4) AND 
+	NOT A(11) AND NOT A(10) AND NOT A(0) AND A(3) AND NOT A(2) AND A(1) AND 
+	mouse0dat(15))
+	OR (D(31) AND NOT $OpTx$FX_DC$47));
+D(31) <= D_I(31) when D_OE(31) = '1' else 'Z';
+D_OE(31) <= NOT dsack_int;
+
+FDCPE_DSACK0: FDCPE port map (DSACK_I(0),dsack_int,NOT CLKCPU_A,'0',AS20);
+DSACK(0) <= DSACK_I(0) when DSACK_OE(0) = '1' else 'Z';
+DSACK_OE(0) <= '0';
+
+
+DSACK_I(1) <= '1';
+DSACK(1) <= DSACK_I(1) when DSACK_OE(1) = '1' else 'Z';
+DSACK_OE(1) <= '0';
+
+
+
+
+
+
+INTSIG2 <= (A(22) AND A(20) AND A(19) AND A(18) AND A(23) AND NOT A(21) AND 
+	NOT A(17) AND NOT A(16));
+
+
+INTSIG3 <= A(3);
+
+
+INTSIG5 <= A(5);
+
+
+PUNT_OUT_I <= '0';
+PUNT_OUT <= PUNT_OUT_I when PUNT_OUT_OE = '1' else 'Z';
+PUNT_OUT_OE <= NOT PUNT_IN;
+
+FDCPE_SPI_MISO: FDCPE port map (SPI_MISO,SPI_MISO_D,NOT SPI_CK,'0','0',SPI_MISO_CE);
+SPI_MISO_D <= ((NOT user_io/cnt(0) AND NOT user_io/cnt(2))
+	OR (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1)));
+SPI_MISO_CE <= (NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_dsack_int: FDCPE port map (dsack_int,'1',NOT CLKCPU_A,'0',AS20);
+
+FDCPE_joyb0: FDCPE port map (joyb(0),SPI_MOSI,SPI_CK,'0','0',joyb_CE(0));
+joyb_CE(0) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_joyb1: FDCPE port map (joyb(1),user_io/sbuf(0),SPI_CK,'0','0',joyb_CE(1));
+joyb_CE(1) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_joyb2: FDCPE port map (joyb(2),user_io/sbuf(1),SPI_CK,'0','0',joyb_CE(2));
+joyb_CE(2) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_joyb3: FDCPE port map (joyb(3),user_io/sbuf(2),SPI_CK,'0','0',joyb_CE(3));
+joyb_CE(3) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_joyb4: FDCPE port map (joyb(4),user_io/sbuf(3),SPI_CK,'0','0',joyb_CE(4));
+joyb_CE(4) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	user_io/cmd(0) AND user_io/cmd(1) AND NOT user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat0: FDCPE port map (mouse0dat(0),mouse0dat_D(0),SPI_CK,'0','0');
+mouse0dat_D(0) <= ((SPI_MOSI AND $OpTx$FX_DC$70)
+	OR (mouse0dat(0) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat1: FDCPE port map (mouse0dat(1),mouse0dat_D(1),SPI_CK,'0','0');
+mouse0dat_D(1) <= ((user_io/sbuf(0) AND $OpTx$FX_DC$70)
+	OR (mouse0dat(1) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat2: FDCPE port map (mouse0dat(2),mouse0dat_D(2),SPI_CK,'0','0');
+mouse0dat_D(2) <= ((user_io/sbuf(1) AND $OpTx$FX_DC$70)
+	OR (mouse0dat(2) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat3: FDCPE port map (mouse0dat(3),mouse0dat_D(3),SPI_CK,'0','0');
+mouse0dat_D(3) <= ((user_io/sbuf(2) AND $OpTx$FX_DC$70)
+	OR (mouse0dat(3) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat4: FDCPE port map (mouse0dat(4),mouse0dat_D(4),SPI_CK,'0','0');
+mouse0dat_D(4) <= ((user_io/sbuf(3) AND $OpTx$FX_DC$70)
+	OR (mouse0dat(4) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat5: FDCPE port map (mouse0dat(5),mouse0dat_D(5),SPI_CK,'0','0');
+mouse0dat_D(5) <= ((user_io/sbuf(4) AND $OpTx$FX_DC$70)
+	OR (mouse0dat(5) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat6: FDCPE port map (mouse0dat(6),mouse0dat_D(6),SPI_CK,'0','0');
+mouse0dat_D(6) <= ((user_io/sbuf(5) AND $OpTx$FX_DC$70)
+	OR (mouse0dat(6) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat7: FDCPE port map (mouse0dat(7),mouse0dat_D(7),SPI_CK,'0','0');
+mouse0dat_D(7) <= ((user_io/sbuf(6) AND $OpTx$FX_DC$70)
+	OR (mouse0dat(7) AND NOT $OpTx$FX_DC$70));
+
+FDCPE_mouse0dat8: FDCPE port map (mouse0dat(8),SPI_MOSI,SPI_CK,'0','0',mouse0dat_CE(8));
+mouse0dat_CE(8) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat9: FDCPE port map (mouse0dat(9),user_io/sbuf(0),SPI_CK,'0','0',mouse0dat_CE(9));
+mouse0dat_CE(9) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat10: FDCPE port map (mouse0dat(10),user_io/sbuf(1),SPI_CK,'0','0',mouse0dat_CE(10));
+mouse0dat_CE(10) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat11: FDCPE port map (mouse0dat(11),user_io/sbuf(2),SPI_CK,'0','0',mouse0dat_CE(11));
+mouse0dat_CE(11) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat12: FDCPE port map (mouse0dat(12),user_io/sbuf(3),SPI_CK,'0','0',mouse0dat_CE(12));
+mouse0dat_CE(12) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat13: FDCPE port map (mouse0dat(13),user_io/sbuf(4),SPI_CK,'0','0',mouse0dat_CE(13));
+mouse0dat_CE(13) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat14: FDCPE port map (mouse0dat(14),user_io/sbuf(5),SPI_CK,'0','0',mouse0dat_CE(14));
+mouse0dat_CE(14) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse0dat15: FDCPE port map (mouse0dat(15),user_io/sbuf(6),SPI_CK,'0','0',mouse0dat_CE(15));
+mouse0dat_CE(15) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_mouse_buttons0: FDCPE port map (mouse_buttons(0),SPI_MOSI,SPI_CK,'0','0',mouse_buttons_CE(0));
+mouse_buttons_CE(0) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND user_io/cnt(3) AND user_io/cnt(4) AND NOT user_io/cnt(5) AND 
+	NOT user_io/cmd(0) AND NOT user_io/cmd(1) AND user_io/cmd(2) AND NOT user_io/cmd(3) AND 
+	NOT user_io/cmd(4) AND NOT user_io/cmd(5) AND NOT user_io/cmd(6) AND NOT user_io/cmd(7));
+
+FDCPE_user_io/cmd0: FDCPE port map (user_io/cmd(0),SPI_MOSI,SPI_CK,'0','0',user_io/cmd_CE(0));
+user_io/cmd_CE(0) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_user_io/cmd1: FDCPE port map (user_io/cmd(1),user_io/sbuf(0),SPI_CK,'0','0',user_io/cmd_CE(1));
+user_io/cmd_CE(1) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_user_io/cmd2: FDCPE port map (user_io/cmd(2),user_io/sbuf(1),SPI_CK,'0','0',user_io/cmd_CE(2));
+user_io/cmd_CE(2) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_user_io/cmd3: FDCPE port map (user_io/cmd(3),user_io/sbuf(2),SPI_CK,'0','0',user_io/cmd_CE(3));
+user_io/cmd_CE(3) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_user_io/cmd4: FDCPE port map (user_io/cmd(4),user_io/sbuf(3),SPI_CK,'0','0',user_io/cmd_CE(4));
+user_io/cmd_CE(4) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_user_io/cmd5: FDCPE port map (user_io/cmd(5),user_io/sbuf(4),SPI_CK,'0','0',user_io/cmd_CE(5));
+user_io/cmd_CE(5) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_user_io/cmd6: FDCPE port map (user_io/cmd(6),user_io/sbuf(5),SPI_CK,'0','0',user_io/cmd_CE(6));
+user_io/cmd_CE(6) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FDCPE_user_io/cmd7: FDCPE port map (user_io/cmd(7),user_io/sbuf(6),SPI_CK,'0','0',user_io/cmd_CE(7));
+user_io/cmd_CE(7) <= (NOT INTSIG8 AND user_io/cnt(0) AND user_io/cnt(2) AND 
+	user_io/cnt(1) AND NOT user_io/cnt(3) AND NOT user_io/cnt(4) AND NOT user_io/cnt(5));
+
+FTCPE_user_io/cnt0: FTCPE port map (user_io/cnt(0),'1',SPI_CK,INTSIG8,'0');
+
+FTCPE_user_io/cnt1: FTCPE port map (user_io/cnt(1),user_io/cnt(0),SPI_CK,INTSIG8,'0');
+
+FTCPE_user_io/cnt2: FTCPE port map (user_io/cnt(2),user_io/cnt_T(2),SPI_CK,INTSIG8,'0');
+user_io/cnt_T(2) <= (user_io/cnt(0) AND user_io/cnt(1));
+
+FTCPE_user_io/cnt3: FTCPE port map (user_io/cnt(3),user_io/cnt_T(3),SPI_CK,INTSIG8,'0');
+user_io/cnt_T(3) <= (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1));
+
+FTCPE_user_io/cnt4: FTCPE port map (user_io/cnt(4),user_io/cnt_T(4),SPI_CK,INTSIG8,'0');
+user_io/cnt_T(4) <= (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1) AND 
+	user_io/cnt(3));
+
+FTCPE_user_io/cnt5: FTCPE port map (user_io/cnt(5),user_io/cnt_T(5),SPI_CK,INTSIG8,'0');
+user_io/cnt_T(5) <= (user_io/cnt(0) AND user_io/cnt(2) AND user_io/cnt(1) AND 
+	user_io/cnt(3) AND user_io/cnt(4));
+
+FDCPE_user_io/sbuf0: FDCPE port map (user_io/sbuf(0),SPI_MOSI,SPI_CK,'0','0',NOT INTSIG8);
+
+FDCPE_user_io/sbuf1: FDCPE port map (user_io/sbuf(1),user_io/sbuf(0),SPI_CK,'0','0',NOT INTSIG8);
+
+FDCPE_user_io/sbuf2: FDCPE port map (user_io/sbuf(2),user_io/sbuf(1),SPI_CK,'0','0',NOT INTSIG8);
+
+FDCPE_user_io/sbuf3: FDCPE port map (user_io/sbuf(3),user_io/sbuf(2),SPI_CK,'0','0',NOT INTSIG8);
+
+FDCPE_user_io/sbuf4: FDCPE port map (user_io/sbuf(4),user_io/sbuf(3),SPI_CK,'0','0',NOT INTSIG8);
+
+FDCPE_user_io/sbuf5: FDCPE port map (user_io/sbuf(5),user_io/sbuf(4),SPI_CK,'0','0',NOT INTSIG8);
+
+FDCPE_user_io/sbuf6: FDCPE port map (user_io/sbuf(6),user_io/sbuf(5),SPI_CK,'0','0',NOT INTSIG8);
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC9572XL-5-VQ64
+
+
+   -----------------------------------------------  
+  /48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 \
+ | 49                                           32 | 
+ | 50                                           31 | 
+ | 51                                           30 | 
+ | 52                                           29 | 
+ | 53                                           28 | 
+ | 54                                           27 | 
+ | 55                                           26 | 
+ | 56               XC9572XL-5-VQ64             25 | 
+ | 57                                           24 | 
+ | 58                                           23 | 
+ | 59                                           22 | 
+ | 60                                           21 | 
+ | 61                                           20 | 
+ | 62                                           19 | 
+ | 63                                           18 | 
+ | 64                                           17 | 
+ \ 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 /
+   -----------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 D<26>                            33 A<4>                          
+  2 AS20                             34 A<5>                          
+  3 VCC                              35 A<6>                          
+  4 DS20                             36 A<7>                          
+  5 KPR                              37 VCC                           
+  6 DSACK<1>                         38 A<8>                          
+  7 DSACK<0>                         39 A<9>                          
+  8 PUNT_OUT                         40 A<10>                         
+  9 PUNT_IN                          41 GND                           
+ 10 KPR                              42 A<11>                         
+ 11 KPR                              43 KPR                           
+ 12 INTSIG5                          44 KPR                           
+ 13 KPR                              45 KPR                           
+ 14 GND                              46 KPR                           
+ 15 CLKCPU_A                         47 A<16>                         
+ 16 SPI_CK                           48 A<17>                         
+ 17 SPI_MOSI                         49 A<23>                         
+ 18 INTSIG8                          50 A<22>                         
+ 19 SPI_MISO                         51 A<20>                         
+ 20 KPR                              52 A<21>                         
+ 21 GND                              53 TDO                           
+ 22 KPR                              54 GND                           
+ 23 INTSIG2                          55 VCC                           
+ 24 INTSIG3                          56 A<19>                         
+ 25 A<1>                             57 A<18>                         
+ 26 VCC                              58 D<31>                         
+ 27 A<0>                             59 D<29>                         
+ 28 TDI                              60 D<27>                         
+ 29 TMS                              61 D<25>                         
+ 30 TCK                              62 D<28>                         
+ 31 A<2>                             63 D<24>                         
+ 32 A<3>                             64 D<30>                         
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-5-VQ64
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25

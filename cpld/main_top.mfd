@@ -1,0 +1,937 @@
+MDF Database:  version 1.0
+MDF_INFO | main_top | XC9572XL-5-VQ64
+MACROCELL | 1 | 7 | data_out<0>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 2 | 1 | 7 | 1 | 8
+INPUTS | 19 | D<24>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<8>  | mouse_buttons<0>  | EXP7_.EXP  | DS20  | dsack_int
+INPUTMC | 6 | 1 | 7 | 2 | 17 | 0 | 4 | 0 | 0 | 1 | 6 | 3 | 4
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+EXPORTS | 1 | 1 | 8
+IMPORTS | 1 | 1 | 6
+EQ | 25 | 
+   !D<24>.D = !D<24> & !$OpTx$FX_DC$47
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	!mouse0dat<8>
+;Imported pterms FB2_7
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	!mouse0dat<0>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & A<2> & !A<1> & joyb<1> & 
+	joyb<3>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & A<2> & !A<1> & !joyb<1> & 
+	!joyb<3>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & A<2> & !A<1> & joyb<0> & 
+	joyb<2>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & A<2> & !A<1> & !joyb<0> & 
+	!joyb<2>;
+   D<24>.CLK = !DS20;
+   D<24>.OE = !dsack_int;
+    data_out<0>.EXP  =  !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & !A<3> & !A<2> & !A<1> & 
+	!mouse_buttons<0>
+
+MACROCELL | 1 | 4 | data_out<1>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 1 | 1 | 4
+INPUTS | 19 | D<25>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<9>  | mouse0dat<1>  | data_out<5>.EXP  | DS20  | dsack_int
+INPUTMC | 6 | 1 | 4 | 2 | 17 | 0 | 3 | 3 | 16 | 1 | 3 | 3 | 4
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+IMPORTS | 1 | 1 | 3
+EQ | 14 | 
+   D<25>.D = D<25> & !$OpTx$FX_DC$47
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<1>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<9>
+;Imported pterms FB2_4
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & A<2> & !A<1> & !joyb<1>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & A<2> & !A<1> & !joyb<0>;
+   D<25>.CLK = !DS20;
+   D<25>.OE = !dsack_int;
+
+MACROCELL | 1 | 9 | data_out<2>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 18 | D<26>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<10>  | mouse0dat<2>  | DS20  | dsack_int
+INPUTMC | 5 | 1 | 9 | 2 | 17 | 0 | 10 | 3 | 15 | 3 | 4
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+EQ | 9 | 
+   D<26>.D = D<26> & !$OpTx$FX_DC$47
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<2>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<10>;
+   D<26>.CLK = !DS20;
+   D<26>.OE = !dsack_int;
+
+MACROCELL | 1 | 1 | data_out<3>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 2 | 1 | 0 | 1 | 2
+INPUTS | 18 | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<7>  | joyb<4>  | mouse0dat<15>  | EXP6_.EXP  | DS20  | dsack_int
+INPUTMC | 5 | 3 | 10 | 0 | 12 | 0 | 5 | 1 | 0 | 3 | 4
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+EXPORTS | 1 | 1 | 2
+IMPORTS | 1 | 1 | 0
+EQ | 18 | 
+   D<27>.D = ;Imported pterms FB2_1
+	  D<27> & !$OpTx$FX_DC$47
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<3>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<11>;
+   D<27>.CLK = !DS20;
+   D<27>.OE = !dsack_int;
+    data_out<3>.EXP  =  !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<7>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & !A<3> & !A<2> & !A<1> & joyb<4>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<15>
+
+MACROCELL | 1 | 5 | data_out<4>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 1 | 1 | 5
+INPUTS | 18 | D<28>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<12>  | mouse0dat<4>  | DS20  | dsack_int
+INPUTMC | 5 | 1 | 5 | 2 | 17 | 0 | 8 | 3 | 13 | 3 | 4
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+EQ | 9 | 
+   D<28>.D = D<28> & !$OpTx$FX_DC$47
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<4>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<12>;
+   D<28>.CLK = !DS20;
+   D<28>.OE = !dsack_int;
+
+MACROCELL | 1 | 3 | data_out<5>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 2 | 1 | 3 | 1 | 4
+INPUTS | 19 | D<29>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | joyb<1>  | joyb<0>  | DS20  | dsack_int  | data_out<7>.EXP
+INPUTMC | 6 | 1 | 3 | 2 | 17 | 0 | 16 | 0 | 17 | 3 | 4 | 1 | 2
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+EXPORTS | 1 | 1 | 4
+IMPORTS | 1 | 1 | 2
+EQ | 14 | 
+   D<29>.D = D<29> & !$OpTx$FX_DC$47
+;Imported pterms FB2_3
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<5>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<13>;
+   D<29>.CLK = !DS20;
+   D<29>.OE = !dsack_int;
+    data_out<5>.EXP  =  !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & A<2> & !A<1> & !joyb<1>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & A<2> & !A<1> & !joyb<0>
+
+MACROCELL | 1 | 8 | data_out<6>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 19 | D<30>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<14>  | mouse0dat<6>  | data_out<0>.EXP  | DS20  | dsack_int
+INPUTMC | 6 | 1 | 8 | 2 | 17 | 0 | 6 | 3 | 11 | 1 | 7 | 3 | 4
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+IMPORTS | 1 | 1 | 7
+EQ | 13 | 
+   D<30>.D = D<30> & !$OpTx$FX_DC$47
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<6>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<14>
+;Imported pterms FB2_8
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & !A<3> & !A<2> & !A<1> & 
+	!mouse_buttons<0>;
+   D<30>.CLK = !DS20;
+   D<30>.OE = !dsack_int;
+
+MACROCELL | 1 | 2 | data_out<7>
+ATTRIBUTES | 8783650 | 0
+OUTPUTMC | 2 | 1 | 2 | 1 | 3
+INPUTS | 19 | D<31>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<5>  | mouse0dat<13>  | data_out<3>.EXP  | DS20  | dsack_int
+INPUTMC | 6 | 1 | 2 | 2 | 17 | 3 | 12 | 0 | 7 | 1 | 1 | 3 | 4
+INPUTP | 13 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33 | 5
+EXPORTS | 1 | 1 | 3
+IMPORTS | 1 | 1 | 1
+EQ | 18 | 
+   D<31>.D = D<31> & !$OpTx$FX_DC$47
+;Imported pterms FB2_2
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<7>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & !A<3> & !A<2> & !A<1> & joyb<4>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<15>;
+   D<31>.CLK = !DS20;
+   D<31>.OE = !dsack_int;
+    data_out<7>.EXP  =  !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<5>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<13>
+
+MACROCELL | 1 | 16 | dsack_int_d
+ATTRIBUTES | 8685442 | 0
+INPUTS | 2 | dsack_int  | AS20
+INPUTMC | 1 | 3 | 4
+INPUTP | 1 | 3
+EQ | 4 | 
+   DSACK<0>.D = dsack_int;
+   !DSACK<0>.CLK = CLKCPU_A;	// GCK
+   DSACK<0>.AP = AS20;
+   DSACK<0>.OE = Gnd;
+GLOBALS | 1 | 2 | CLKCPU_A
+
+MACROCELL | 3 | 3 | user_io/cnt<0>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 29 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 0 | 14 | 2 | 16
+INPUTS | 1 | INTSIG8
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/cnt<0>.T = Vcc;
+   user_io/cnt<0>.CLK = SPI_CK;	// GCK
+   user_io/cnt<0>.AR = INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 7 | user_io/cnt<2>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 27 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 0 | 14 | 2 | 16
+INPUTS | 3 | user_io/cnt<0>  | user_io/cnt<1>  | INTSIG8
+INPUTMC | 2 | 3 | 3 | 2 | 8
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/cnt<2>.T = user_io/cnt<0> & user_io/cnt<1>;
+   user_io/cnt<2>.CLK = SPI_CK;	// GCK
+   user_io/cnt<2>.AR = INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 8 | user_io/cnt<1>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 28 | 2 | 7 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 0 | 14 | 2 | 16
+INPUTS | 2 | user_io/cnt<0>  | INTSIG8
+INPUTMC | 1 | 3 | 3
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/cnt<1>.T = user_io/cnt<0>;
+   user_io/cnt<1>.CLK = SPI_CK;	// GCK
+   user_io/cnt<1>.AR = INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 6 | user_io/cnt<3>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 26 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 0 | 14 | 2 | 16
+INPUTS | 4 | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | INTSIG8
+INPUTMC | 3 | 3 | 3 | 2 | 7 | 2 | 8
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/cnt<3>.T = user_io/cnt<0> & user_io/cnt<2> & user_io/cnt<1>;
+   user_io/cnt<3>.CLK = SPI_CK;	// GCK
+   user_io/cnt<3>.AR = INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 5 | user_io/cnt<4>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 25 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 0 | 14 | 2 | 16
+INPUTS | 5 | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | INTSIG8
+INPUTMC | 4 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cnt<4>.T = user_io/cnt<0> & user_io/cnt<2> & user_io/cnt<1> & 
+	user_io/cnt<3>;
+   user_io/cnt<4>.CLK = SPI_CK;	// GCK
+   user_io/cnt<4>.AR = INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 3 | user_io/cnt<5>
+ATTRIBUTES | 4358928 | 0
+OUTPUTMC | 24 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 0 | 14 | 2 | 16
+INPUTS | 6 | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | INTSIG8
+INPUTMC | 5 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cnt<5>.T = user_io/cnt<0> & user_io/cnt<2> & user_io/cnt<1> & 
+	user_io/cnt<3> & user_io/cnt<4>;
+   user_io/cnt<5>.CLK = SPI_CK;	// GCK
+   user_io/cnt<5>.AR = INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 2 | user_io/sbuf<0>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 5 | 2 | 1 | 2 | 14 | 0 | 16 | 3 | 16 | 0 | 3
+INPUTS | 2 | SPI_MOSI  | INTSIG8
+INPUTP | 2 | 24 | 25
+EQ | 3 | 
+   user_io/sbuf<0>.D = SPI_MOSI;
+   user_io/sbuf<0>.CLK = SPI_CK;	// GCK
+   user_io/sbuf<0>.CE = !INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 1 | user_io/sbuf<1>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 5 | 2 | 0 | 2 | 13 | 0 | 15 | 0 | 10 | 3 | 15
+INPUTS | 2 | user_io/sbuf<0>  | INTSIG8
+INPUTMC | 1 | 2 | 2
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/sbuf<1>.D = user_io/sbuf<0>;
+   user_io/sbuf<1>.CLK = SPI_CK;	// GCK
+   user_io/sbuf<1>.CE = !INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 0 | user_io/sbuf<2>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 5 | 3 | 8 | 2 | 12 | 0 | 13 | 0 | 9 | 3 | 14
+INPUTS | 2 | user_io/sbuf<1>  | INTSIG8
+INPUTMC | 1 | 2 | 1
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/sbuf<2>.D = user_io/sbuf<1>;
+   user_io/sbuf<2>.CLK = SPI_CK;	// GCK
+   user_io/sbuf<2>.CE = !INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 8 | user_io/sbuf<3>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 5 | 2 | 11 | 3 | 7 | 0 | 12 | 0 | 8 | 3 | 13
+INPUTS | 2 | user_io/sbuf<2>  | INTSIG8
+INPUTMC | 1 | 2 | 0
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/sbuf<3>.D = user_io/sbuf<2>;
+   user_io/sbuf<3>.CLK = SPI_CK;	// GCK
+   user_io/sbuf<3>.CE = !INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 15 | user_io/cmd<0>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | SPI_MOSI  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 6 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 2 | 24 | 25
+EQ | 4 | 
+   user_io/cmd<0>.D = SPI_MOSI;
+   user_io/cmd<0>.CLK = SPI_CK;	// GCK
+   user_io/cmd<0>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 14 | user_io/cmd<1>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | user_io/sbuf<0>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 7 | 2 | 2 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cmd<1>.D = user_io/sbuf<0>;
+   user_io/cmd<1>.CLK = SPI_CK;	// GCK
+   user_io/cmd<1>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 13 | user_io/cmd<2>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | user_io/sbuf<1>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 7 | 2 | 1 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cmd<2>.D = user_io/sbuf<1>;
+   user_io/cmd<2>.CLK = SPI_CK;	// GCK
+   user_io/cmd<2>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 12 | user_io/cmd<3>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | user_io/sbuf<2>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 7 | 2 | 0 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cmd<3>.D = user_io/sbuf<2>;
+   user_io/cmd<3>.CLK = SPI_CK;	// GCK
+   user_io/cmd<3>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 11 | user_io/cmd<4>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | user_io/sbuf<3>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 7 | 3 | 8 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cmd<4>.D = user_io/sbuf<3>;
+   user_io/cmd<4>.CLK = SPI_CK;	// GCK
+   user_io/cmd<4>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 10 | user_io/cmd<5>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | user_io/sbuf<4>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 7 | 3 | 7 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cmd<5>.D = user_io/sbuf<4>;
+   user_io/cmd<5>.CLK = SPI_CK;	// GCK
+   user_io/cmd<5>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 2 | 9 | user_io/cmd<6>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | user_io/sbuf<5>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 7 | 3 | 6 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cmd<6>.D = user_io/sbuf<5>;
+   user_io/cmd<6>.CLK = SPI_CK;	// GCK
+   user_io/cmd<6>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 9 | user_io/cmd<7>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+INPUTS | 8 | user_io/sbuf<6>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 7 | 3 | 5 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+INPUTP | 1 | 25
+EQ | 4 | 
+   user_io/cmd<7>.D = user_io/sbuf<6>;
+   user_io/cmd<7>.CLK = SPI_CK;	// GCK
+   user_io/cmd<7>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 7 | user_io/sbuf<4>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 4 | 2 | 10 | 3 | 6 | 0 | 7 | 3 | 12
+INPUTS | 2 | user_io/sbuf<3>  | INTSIG8
+INPUTMC | 1 | 3 | 8
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/sbuf<4>.D = user_io/sbuf<3>;
+   user_io/sbuf<4>.CLK = SPI_CK;	// GCK
+   user_io/sbuf<4>.CE = !INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 6 | user_io/sbuf<5>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 4 | 2 | 9 | 3 | 5 | 0 | 6 | 3 | 11
+INPUTS | 2 | user_io/sbuf<4>  | INTSIG8
+INPUTMC | 1 | 3 | 7
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/sbuf<5>.D = user_io/sbuf<4>;
+   user_io/sbuf<5>.CLK = SPI_CK;	// GCK
+   user_io/sbuf<5>.CE = !INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 5 | user_io/sbuf<6>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 3 | 9 | 0 | 5 | 3 | 10
+INPUTS | 2 | user_io/sbuf<5>  | INTSIG8
+INPUTMC | 1 | 3 | 6
+INPUTP | 1 | 25
+EQ | 3 | 
+   user_io/sbuf<6>.D = user_io/sbuf<5>;
+   user_io/sbuf<6>.CLK = SPI_CK;	// GCK
+   user_io/sbuf<6>.CE = !INTSIG8;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 17 | joyb<0>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 2 | 1 | 6 | 1 | 3
+INPUTS | 16 | SPI_MOSI  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 14 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 2 | 24 | 25
+EQ | 6 | 
+   joyb<0>.D = SPI_MOSI;
+   joyb<0>.CLK = SPI_CK;	// GCK
+   joyb<0>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5> & 
+	user_io/cmd<0> & user_io/cmd<1> & !user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 16 | joyb<1>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 2 | 1 | 6 | 1 | 3
+INPUTS | 16 | user_io/sbuf<0>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 2 | 2 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   joyb<1>.D = user_io/sbuf<0>;
+   joyb<1>.CLK = SPI_CK;	// GCK
+   joyb<1>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5> & 
+	user_io/cmd<0> & user_io/cmd<1> & !user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 15 | joyb<2>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 6
+INPUTS | 16 | user_io/sbuf<1>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 2 | 1 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   joyb<2>.D = user_io/sbuf<1>;
+   joyb<2>.CLK = SPI_CK;	// GCK
+   joyb<2>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5> & 
+	user_io/cmd<0> & user_io/cmd<1> & !user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 13 | joyb<3>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 6
+INPUTS | 16 | user_io/sbuf<2>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 2 | 0 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   joyb<3>.D = user_io/sbuf<2>;
+   joyb<3>.CLK = SPI_CK;	// GCK
+   joyb<3>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5> & 
+	user_io/cmd<0> & user_io/cmd<1> & !user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 12 | joyb<4>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 16 | user_io/sbuf<3>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 3 | 8 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   joyb<4>.D = user_io/sbuf<3>;
+   joyb<4>.CLK = SPI_CK;	// GCK
+   joyb<4>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5> & 
+	user_io/cmd<0> & user_io/cmd<1> & !user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 17 | mouse0dat<0>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 6 | 3 | 17
+INPUTS | 3 | mouse0dat<0>  | $OpTx$FX_DC$70  | SPI_MOSI
+INPUTMC | 2 | 3 | 17 | 2 | 16
+INPUTP | 1 | 24
+EQ | 3 | 
+   mouse0dat<0>.D = SPI_MOSI & $OpTx$FX_DC$70
+	# mouse0dat<0> & !$OpTx$FX_DC$70;
+   mouse0dat<0>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 10 | mouse0dat<10>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 16 | user_io/sbuf<1>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 2 | 1 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   mouse0dat<10>.D = user_io/sbuf<1>;
+   mouse0dat<10>.CLK = SPI_CK;	// GCK
+   mouse0dat<10>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 9 | mouse0dat<11>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 0
+INPUTS | 16 | user_io/sbuf<2>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 2 | 0 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   mouse0dat<11>.D = user_io/sbuf<2>;
+   mouse0dat<11>.CLK = SPI_CK;	// GCK
+   mouse0dat<11>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 8 | mouse0dat<12>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 5
+INPUTS | 16 | user_io/sbuf<3>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 3 | 8 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   mouse0dat<12>.D = user_io/sbuf<3>;
+   mouse0dat<12>.CLK = SPI_CK;	// GCK
+   mouse0dat<12>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 7 | mouse0dat<13>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 2
+INPUTS | 16 | user_io/sbuf<4>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 3 | 7 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   mouse0dat<13>.D = user_io/sbuf<4>;
+   mouse0dat<13>.CLK = SPI_CK;	// GCK
+   mouse0dat<13>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 6 | mouse0dat<14>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 16 | user_io/sbuf<5>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 3 | 6 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   mouse0dat<14>.D = user_io/sbuf<5>;
+   mouse0dat<14>.CLK = SPI_CK;	// GCK
+   mouse0dat<14>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 5 | mouse0dat<15>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 16 | user_io/sbuf<6>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 3 | 5 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   mouse0dat<15>.D = user_io/sbuf<6>;
+   mouse0dat<15>.CLK = SPI_CK;	// GCK
+   mouse0dat<15>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 16 | mouse0dat<1>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 4 | 3 | 16
+INPUTS | 3 | mouse0dat<1>  | $OpTx$FX_DC$70  | user_io/sbuf<0>
+INPUTMC | 3 | 3 | 16 | 2 | 16 | 2 | 2
+EQ | 3 | 
+   mouse0dat<1>.D = user_io/sbuf<0> & $OpTx$FX_DC$70
+	# mouse0dat<1> & !$OpTx$FX_DC$70;
+   mouse0dat<1>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 15 | mouse0dat<2>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 9 | 3 | 15
+INPUTS | 3 | mouse0dat<2>  | $OpTx$FX_DC$70  | user_io/sbuf<1>
+INPUTMC | 3 | 3 | 15 | 2 | 16 | 2 | 1
+EQ | 3 | 
+   mouse0dat<2>.D = user_io/sbuf<1> & $OpTx$FX_DC$70
+	# mouse0dat<2> & !$OpTx$FX_DC$70;
+   mouse0dat<2>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 14 | mouse0dat<3>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 0 | 3 | 14
+INPUTS | 3 | mouse0dat<3>  | $OpTx$FX_DC$70  | user_io/sbuf<2>
+INPUTMC | 3 | 3 | 14 | 2 | 16 | 2 | 0
+EQ | 3 | 
+   mouse0dat<3>.D = user_io/sbuf<2> & $OpTx$FX_DC$70
+	# mouse0dat<3> & !$OpTx$FX_DC$70;
+   mouse0dat<3>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 13 | mouse0dat<4>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 5 | 3 | 13
+INPUTS | 3 | mouse0dat<4>  | $OpTx$FX_DC$70  | user_io/sbuf<3>
+INPUTMC | 3 | 3 | 13 | 2 | 16 | 3 | 8
+EQ | 3 | 
+   mouse0dat<4>.D = user_io/sbuf<3> & $OpTx$FX_DC$70
+	# mouse0dat<4> & !$OpTx$FX_DC$70;
+   mouse0dat<4>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 12 | mouse0dat<5>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 2 | 3 | 12
+INPUTS | 3 | mouse0dat<5>  | $OpTx$FX_DC$70  | user_io/sbuf<4>
+INPUTMC | 3 | 3 | 12 | 2 | 16 | 3 | 7
+EQ | 3 | 
+   mouse0dat<5>.D = user_io/sbuf<4> & $OpTx$FX_DC$70
+	# mouse0dat<5> & !$OpTx$FX_DC$70;
+   mouse0dat<5>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 11 | mouse0dat<6>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 8 | 3 | 11
+INPUTS | 3 | mouse0dat<6>  | $OpTx$FX_DC$70  | user_io/sbuf<5>
+INPUTMC | 3 | 3 | 11 | 2 | 16 | 3 | 6
+EQ | 3 | 
+   mouse0dat<6>.D = user_io/sbuf<5> & $OpTx$FX_DC$70
+	# mouse0dat<6> & !$OpTx$FX_DC$70;
+   mouse0dat<6>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 10 | mouse0dat<7>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 1 | 3 | 10
+INPUTS | 3 | mouse0dat<7>  | $OpTx$FX_DC$70  | user_io/sbuf<6>
+INPUTMC | 3 | 3 | 10 | 2 | 16 | 3 | 5
+EQ | 3 | 
+   mouse0dat<7>.D = user_io/sbuf<6> & $OpTx$FX_DC$70
+	# mouse0dat<7> & !$OpTx$FX_DC$70;
+   mouse0dat<7>.CLK = SPI_CK;	// GCK
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 4 | mouse0dat<8>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 7
+INPUTS | 16 | SPI_MOSI  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 14 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 2 | 24 | 25
+EQ | 6 | 
+   mouse0dat<8>.D = SPI_MOSI;
+   mouse0dat<8>.CLK = SPI_CK;	// GCK
+   mouse0dat<8>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 3 | mouse0dat<9>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 4
+INPUTS | 16 | user_io/sbuf<0>  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 15 | 2 | 2 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 1 | 25
+EQ | 6 | 
+   mouse0dat<9>.D = user_io/sbuf<0>;
+   mouse0dat<9>.CLK = SPI_CK;	// GCK
+   mouse0dat<9>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & !user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 0 | mouse_buttons<0>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 1 | 7
+INPUTS | 16 | SPI_MOSI  | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<1>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>
+INPUTMC | 14 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9
+INPUTP | 2 | 24 | 25
+EQ | 6 | 
+   mouse_buttons<0>.D = SPI_MOSI;
+   mouse_buttons<0>.CLK = SPI_CK;	// GCK
+   mouse_buttons<0>.CE = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & !user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & 
+	!user_io/cmd<4> & !user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 0 | 14 | SPI_MISO_OBUF
+ATTRIBUTES | 8684354 | 0
+INPUTS | 6 | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>
+INPUTMC | 6 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3
+EQ | 4 | 
+   SPI_MISO.D = !user_io/cnt<0> & !user_io/cnt<2>
+	# user_io/cnt<0> & user_io/cnt<2> & user_io/cnt<1>;
+   !SPI_MISO.CLK = SPI_CK;	// GCK
+   SPI_MISO.CE = !user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5>;
+GLOBALS | 1 | 2 | SPI_CK
+
+MACROCELL | 3 | 4 | dsack_int
+ATTRIBUTES | 8553344 | 0
+OUTPUTMC | 9 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 1 | 1 | 5 | 1 | 3 | 1 | 8 | 1 | 2 | 1 | 16
+INPUTS | 1 | AS20
+INPUTP | 1 | 3
+EQ | 3 | 
+   dsack_int.D = Vcc;
+   !dsack_int.CLK = CLKCPU_A;	// GCK
+   dsack_int.AP = AS20;
+GLOBALS | 1 | 2 | CLKCPU_A
+
+MACROCELL | 0 | 11 | INTSIG2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 8 | A<22>  | A<20>  | A<19>  | A<18>  | A<23>  | A<21>  | A<17>  | A<16>
+INPUTP | 8 | 72 | 74 | 82 | 83 | 70 | 75 | 68 | 67
+EQ | 2 | 
+   INTSIG2 = A<22> & A<20> & A<19> & A<18> & A<23> & !A<21> & 
+	!A<17> & !A<16>;
+
+MACROCELL | 0 | 1 | DSACK_dsack_int_d_not0000
+ATTRIBUTES | 265986 | 0
+INPUTS | 1 | PUNT_IN
+INPUTP | 1 | 12
+EQ | 2 | 
+   PUNT_OUT = Gnd;
+   PUNT_OUT.OE = !PUNT_IN;
+
+MACROCELL | 2 | 4 | INTSIG3_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | A<3>
+INPUTP | 1 | 44
+EQ | 1 | 
+   INTSIG3 = A<3>;
+
+MACROCELL | 0 | 2 | INTSIG5_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | A<5>
+INPUTP | 1 | 47
+EQ | 1 | 
+   INTSIG5 = A<5>;
+
+MACROCELL | 1 | 14 | N1
+ATTRIBUTES | 265986 | 0
+INPUTS | 0
+EQ | 2 | 
+   DSACK<1> = Vcc;
+   DSACK<1>.OE = Gnd;
+
+MACROCELL | 2 | 17 | $OpTx$FX_DC$47
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 8 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 3 | 1 | 8 | 1 | 2
+INPUTS | 12 | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<3>  | A<2>  | A<1>  | A<0>
+INPUTP | 12 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 44 | 43 | 33 | 38
+EQ | 6 | 
+   $OpTx$FX_DC$47 = !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<3> & A<2> & !A<1>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<3> & !A<2> & A<1>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & !A<3> & !A<2> & !A<1>;
+
+MACROCELL | 2 | 16 | $OpTx$FX_DC$70
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 8 | 3 | 17 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 3 | 10
+INPUTS | 15 | INTSIG8  | user_io/cnt<0>  | user_io/cnt<2>  | user_io/cnt<1>  | user_io/cnt<3>  | user_io/cnt<4>  | user_io/cnt<5>  | user_io/cmd<0>  | user_io/cmd<2>  | user_io/cmd<3>  | user_io/cmd<4>  | user_io/cmd<5>  | user_io/cmd<6>  | user_io/cmd<7>  | user_io/cmd<1>
+INPUTMC | 14 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 15 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 2 | 14
+INPUTP | 1 | 25
+EQ | 8 | 
+   $OpTx$FX_DC$70 = !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<0> & user_io/cmd<2> & !user_io/cmd<3> & !user_io/cmd<4> & 
+	!user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>
+	# !INTSIG8 & user_io/cnt<0> & user_io/cnt<2> & 
+	user_io/cnt<1> & user_io/cnt<3> & !user_io/cnt<4> & !user_io/cnt<5> & 
+	!user_io/cmd<1> & user_io/cmd<2> & !user_io/cmd<3> & !user_io/cmd<4> & 
+	!user_io/cmd<5> & !user_io/cmd<6> & !user_io/cmd<7>;
+
+MACROCELL | 1 | 0 | EXP6_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 16 | D<27>  | $OpTx$FX_DC$47  | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<3>  | mouse0dat<11>
+INPUTMC | 4 | 1 | 1 | 2 | 17 | 3 | 14 | 0 | 9
+INPUTP | 12 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33
+EXPORTS | 1 | 1 | 1
+EQ | 7 | 
+       EXP6_.EXP  =  D<27> & !$OpTx$FX_DC$47
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<3>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & !A<2> & A<1> & 
+	mouse0dat<11>
+
+MACROCELL | 1 | 6 | EXP7_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 7
+INPUTS | 17 | A<9>  | A<8>  | A<7>  | A<6>  | A<5>  | A<4>  | A<11>  | A<10>  | A<0>  | A<3>  | A<2>  | A<1>  | mouse0dat<0>  | joyb<1>  | joyb<3>  | joyb<0>  | joyb<2>
+INPUTMC | 5 | 3 | 17 | 0 | 16 | 0 | 13 | 0 | 17 | 0 | 15
+INPUTP | 12 | 54 | 52 | 50 | 49 | 47 | 46 | 59 | 55 | 38 | 44 | 43 | 33
+EXPORTS | 1 | 1 | 7
+EQ | 15 | 
+       EXP7_.EXP  =  !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & !A<2> & A<1> & 
+	!mouse0dat<0>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & A<2> & !A<1> & joyb<1> & 
+	joyb<3>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & A<0> & A<3> & A<2> & !A<1> & !joyb<1> & 
+	!joyb<3>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & A<2> & !A<1> & joyb<0> & 
+	joyb<2>
+	# !A<9> & !A<8> & !A<7> & !A<6> & !A<5> & !A<4> & 
+	!A<11> & !A<10> & !A<0> & A<3> & A<2> & !A<1> & !joyb<0> & 
+	!joyb<2>
+
+PIN | A<9> | 64 | 0 | N/A | 54 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<8> | 64 | 0 | N/A | 52 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<7> | 64 | 0 | N/A | 50 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<6> | 64 | 0 | N/A | 49 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<5> | 64 | 0 | N/A | 47 | 12 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 0 | 2 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<4> | 64 | 0 | N/A | 46 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<11> | 64 | 0 | N/A | 59 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<10> | 64 | 0 | N/A | 55 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | INTSIG8 | 64 | 0 | N/A | 25 | 36 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 8 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 3 | 7 | 3 | 6 | 3 | 5 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 0 | 4 | 0 | 3 | 0 | 0 | 2 | 16
+PIN | DS20 | 64 | 0 | N/A | 5 | 8 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 1 | 1 | 5 | 1 | 3 | 1 | 8 | 1 | 2
+PIN | A<0> | 64 | 0 | N/A | 38 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<1> | 64 | 0 | N/A | 33 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<3> | 64 | 0 | N/A | 44 | 12 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 4 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<2> | 64 | 0 | N/A | 43 | 11 | 1 | 7 | 1 | 4 | 1 | 9 | 1 | 0 | 1 | 5 | 1 | 2 | 1 | 8 | 1 | 1 | 2 | 17 | 1 | 3 | 1 | 6
+PIN | A<22> | 64 | 0 | N/A | 72 | 1 | 0 | 11
+PIN | A<20> | 64 | 0 | N/A | 74 | 1 | 0 | 11
+PIN | A<19> | 64 | 0 | N/A | 82 | 1 | 0 | 11
+PIN | A<18> | 64 | 0 | N/A | 83 | 1 | 0 | 11
+PIN | A<23> | 64 | 0 | N/A | 70 | 1 | 0 | 11
+PIN | A<21> | 64 | 0 | N/A | 75 | 1 | 0 | 11
+PIN | A<17> | 64 | 0 | N/A | 68 | 1 | 0 | 11
+PIN | A<16> | 64 | 0 | N/A | 67 | 1 | 0 | 11
+PIN | CLKCPU_A | 4096 | 0 | N/A | 20 | 2 | 1 | 16 | 3 | 4
+PIN | AS20 | 64 | 0 | N/A | 3 | 2 | 1 | 16 | 3 | 4
+PIN | SPI_CK | 8192 | 0 | N/A | 21 | 44 | 3 | 3 | 2 | 7 | 2 | 8 | 2 | 6 | 2 | 5 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 8 | 2 | 15 | 2 | 14 | 2 | 13 | 2 | 12 | 2 | 11 | 2 | 10 | 2 | 9 | 3 | 9 | 3 | 7 | 3 | 6 | 3 | 5 | 0 | 17 | 0 | 16 | 0 | 15 | 0 | 13 | 0 | 12 | 3 | 17 | 0 | 10 | 0 | 9 | 0 | 8 | 0 | 7 | 0 | 6 | 0 | 5 | 3 | 16 | 3 | 15 | 3 | 14 | 3 | 13 | 3 | 12 | 3 | 11 | 3 | 10 | 0 | 4 | 0 | 3 | 0 | 0 | 0 | 14
+PIN | SPI_MOSI | 64 | 0 | N/A | 24 | 6 | 2 | 2 | 2 | 15 | 0 | 17 | 3 | 17 | 0 | 4 | 0 | 0
+PIN | PUNT_IN | 64 | 0 | N/A | 12 | 1 | 0 | 1
+PIN | D<24> | 536871040 | 0 | N/A | 90
+PIN | D<25> | 536871040 | 0 | N/A | 88
+PIN | D<26> | 536871040 | 0 | N/A | 1
+PIN | D<27> | 536871040 | 0 | N/A | 87
+PIN | D<28> | 536871040 | 0 | N/A | 89
+PIN | D<29> | 536871040 | 0 | N/A | 86
+PIN | D<30> | 536871040 | 0 | N/A | 92
+PIN | D<31> | 536871040 | 0 | N/A | 84
+PIN | DSACK<0> | 536871040 | 0 | N/A | 10
+PIN | SPI_MISO | 536871040 | 0 | N/A | 26
+PIN | INTSIG2 | 536871040 | 0 | N/A | 30
+PIN | PUNT_OUT | 536871040 | 0 | N/A | 11
+PIN | INTSIG3 | 536871040 | 0 | N/A | 31
+PIN | INTSIG5 | 536871040 | 0 | N/A | 16
+PIN | DSACK<1> | 536871040 | 0 | N/A | 9
