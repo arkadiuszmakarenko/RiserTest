@@ -1,0 +1,5 @@
+set -tmpdir "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/xst/projnav.tmp"
+set -xsthdpdir "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/xst"
+elaborate
+-ifn gary.prj
+-ifmt mixed

@@ -1,0 +1,105 @@
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+taengine -intstyle ise -f address_decoder -w --format html1 -l address_decoder_html/tim/timing_report.htm 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 
+xst -intstyle ise -ifn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.xst" -ofn "C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/address_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -uc address_decoder.ucf -p xc9572xl-VQ64-5 address_decoder.ngc address_decoder.ngd  
+cpldfit -intstyle ise -p xc9572xl-5-VQ64 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -unused float -power std -terminate keeper address_decoder.ngd 
+XSLTProcess address_decoder_build.xml 
+tsim -intstyle ise address_decoder address_decoder.nga 
+hprep6 -s IEEE1149 -n address_decoder -i address_decoder 

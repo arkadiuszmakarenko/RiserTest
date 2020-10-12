@@ -1,0 +1,34 @@
+Release 13.1 - xst O.40d (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to C:/Repo/cd32_riser/firmware/cpld/TFRiserRev1/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "address_decoder.v" in library work
+ERROR:HDLCompilers:26 - "address_decoder.v" line 22 expecting ')', found '['
+ERROR:HDLCompilers:28 - "address_decoder.v" line 32 'INTSIG3' has not been declared
+ERROR:HDLCompilers:28 - "address_decoder.v" line 32 'A3' has not been declared
+ERROR:HDLCompilers:28 - "address_decoder.v" line 33 'A5' has not been declared
+Module <address_decoder> compiled
+Analysis of file <"gary.prj"> failed.
+--> 
+
+Total memory usage is 4448144 kilobytes
+
+Number of errors   :    4 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

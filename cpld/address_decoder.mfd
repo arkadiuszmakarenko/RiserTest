@@ -1,0 +1,37 @@
+MDF Database:  version 1.0
+MDF_INFO | address_decoder | XC9572XL-5-VQ64
+MACROCELL | 0 | 11 | INTSIG2_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 8 | A<22>  | A<20>  | A<19>  | A<18>  | A<23>  | A<21>  | A<17>  | A<16>
+INPUTP | 8 | 72 | 74 | 82 | 83 | 70 | 75 | 68 | 67
+EQ | 2 | 
+   INTSIG2 = A<22> & A<20> & A<19> & A<18> & A<23> & !A<21> & 
+	!A<17> & !A<16>;
+
+MACROCELL | 2 | 4 | INTSIG3_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | A<3>
+INPUTP | 1 | 44
+EQ | 1 | 
+   INTSIG3 = A<3>;
+
+MACROCELL | 0 | 2 | INTSIG5_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | A<5>
+INPUTP | 1 | 47
+EQ | 1 | 
+   INTSIG5 = A<5>;
+
+PIN | A<22> | 64 | 0 | N/A | 72 | 1 | 0 | 11
+PIN | A<20> | 64 | 0 | N/A | 74 | 1 | 0 | 11
+PIN | A<19> | 64 | 0 | N/A | 82 | 1 | 0 | 11
+PIN | A<18> | 64 | 0 | N/A | 83 | 1 | 0 | 11
+PIN | A<23> | 64 | 0 | N/A | 70 | 1 | 0 | 11
+PIN | A<21> | 64 | 0 | N/A | 75 | 1 | 0 | 11
+PIN | A<17> | 64 | 0 | N/A | 68 | 1 | 0 | 11
+PIN | A<16> | 64 | 0 | N/A | 67 | 1 | 0 | 11
+PIN | A<3> | 64 | 0 | N/A | 44 | 1 | 2 | 4
+PIN | A<5> | 64 | 0 | N/A | 47 | 1 | 0 | 2
+PIN | INTSIG2 | 536871040 | 0 | N/A | 30
+PIN | INTSIG3 | 536871040 | 0 | N/A | 31
+PIN | INTSIG5 | 536871040 | 0 | N/A | 16
