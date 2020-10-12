@@ -5,16 +5,31 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompilers" num="261" delta="new" ><arg fmt="%s" index="1">&quot;main_top.v&quot; line 89 </arg>Connection to output port &apos;<arg fmt="%s" index="2">BUTTONS</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">AS</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompilers" num="261" delta="new" ><arg fmt="%s" index="1">&quot;main_top.v&quot; line 90 </arg>Connection to output port &apos;<arg fmt="%s" index="2">SWITCHES</arg>&apos; does not match port size
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DS</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="863" delta="old" >&quot;<arg fmt="%s" index="1">user_io.v</arg>&quot; line <arg fmt="%d" index="2">34</arg>: Name conflict (<arg fmt="%s" index="3">&lt;kbd_mouse_data&gt; and &lt;KBD_MOUSE_DATA&gt;, renaming kbd_mouse_data as kbd_mouse_data_rnm0</arg>).
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SPI2_MOSI</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="863" delta="old" >&quot;<arg fmt="%s" index="1">user_io.v</arg>&quot; line <arg fmt="%d" index="2">32</arg>: Name conflict (<arg fmt="%s" index="3">&lt;kbd_mouse_strobe&gt; and &lt;KBD_MOUSE_STROBE&gt;, renaming kbd_mouse_strobe as kbd_mouse_strobe_rnm0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="863" delta="old" >&quot;<arg fmt="%s" index="1">user_io.v</arg>&quot; line <arg fmt="%d" index="2">33</arg>: Name conflict (<arg fmt="%s" index="3">&lt;kbd_mouse_type&gt; and &lt;KBD_MOUSE_TYPE&gt;, renaming kbd_mouse_type as kbd_mouse_type_rnm0</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="863" delta="old" >&quot;<arg fmt="%s" index="1">user_io.v</arg>&quot; line <arg fmt="%d" index="2">31</arg>: Name conflict (<arg fmt="%s" index="3">&lt;mouse_buttons&gt; and &lt;MOUSE_BUTTONS&gt;, renaming mouse_buttons as mouse_buttons_rnm0</arg>).
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">joy1enable</arg>&gt; in unit &lt;<arg fmt="%s" index="2">main_top</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="info" file="Xst" num="2679" delta="old" >Register &lt;<arg fmt="%s" index="1">kbd_mouse_strobe_rnm0</arg>&gt; in unit &lt;<arg fmt="%s" index="2">user_io</arg>&gt; has a constant value of <arg fmt="%s" index="3">0</arg> during circuit operation. The register is replaced by logic.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">kbd_mouse_data_rnm0</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">00000000</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">INTSIG1</arg>&gt; is never assigned.
@@ -23,70 +38,89 @@
 <msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">INTSIG4</arg>&gt; is never assigned.
 </msg>
 
-<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">PUNT_OUT</arg>&gt; is never assigned.
-</msg>
-
 <msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">INTSIG6</arg>&gt; is never assigned.
 </msg>
 
 <msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">INTSIG7</arg>&gt; is never assigned.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">INTSIG8</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">joyb&lt;5&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">A&lt;15:6&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">joya&lt;5&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">A&lt;4&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">joya&lt;3:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">A&lt;2:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">joy1enable</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;0&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ciab_decode</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;1&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">ciaa_decode</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;2&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">board_switches</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;3&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">board_buttons</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;4&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">_mthird</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">SPI2_MISO</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">_mright</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;5&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="1426" delta="new" >The value init of the FF/Latch <arg fmt="%s" index="1">dsack_int</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">main_top</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;6&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">kbd_mouse_type_rnm0_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2565" delta="old" >Inout &lt;<arg fmt="%s" index="1">D&lt;7&gt;</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">kbd_mouse_type_rnm0_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">PUNT_IN</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">joystick1_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RW</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">joystick0_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">BUSINT</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">joystick0_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">DSACK0</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">joystick0_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1306" delta="old" >Output &lt;<arg fmt="%s" index="1">DSACK1</arg>&gt; is never assigned.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">joystick0_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">SPI2_CLK</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">joystick0_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">joystick0_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">but_sw_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">but_sw_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">but_sw_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">but_sw_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mouse_buttons_rnm0_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">mouse_buttons_rnm0_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">user_io</arg>&gt;.
 </msg>
 
 </messages>
